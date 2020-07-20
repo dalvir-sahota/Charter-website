@@ -1,0 +1,360 @@
+html, body {
+  height: 100%;
+}
+body{
+  padding:none;
+}
+header.landing-page-header{
+  background-image: url(../img/01.jpg);
+}
+header.sub-pages{
+  padding:5px;
+}
+header.sub-pages .navbar .navbar-nav > li > a, header.sub-pages .navbar-brand {
+  color:black;
+  font-weight: bold;
+}
+header.sub-pages .navbar .navbar-nav > li.active > a{
+  color:#eb120a;
+}
+header.sub-pages .nav > li > a:hover, header.sub-pages .nav > li > a:focus, header.sub-pages .navbar-brand:hover{
+  color: #eb120a;
+  background-color: transparent;
+}
+.navbar .navbar-nav > li > a{
+  color:white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.nav > li > a:hover, .nav > li > a:focus,.navbar-brand:hover {
+  color: #eb120a;
+  background-color: transparent;
+}
+.navbar-toggle{
+  border:1px solid #eb120a;
+}
+.navbar-brand{
+  color:white;
+}
+.navbar-toggle .icon-bar{
+  border:1px solid white;
+}
+header.sub-pages .navbar-toggle .icon-bar{
+  border:1px solid black;
+}
+.main-content-container{
+  width:75%;
+  margin:auto;
+}
+.main-content-container img{
+  margin:auto;
+  margin-bottom:5px;
+}
+h1.main-page-heading{
+  font-size: 100px;
+  font-weight: bold;
+  color:orangered;
+  padding:80px 50px 120px 50px;
+}
+
+.row.getting-started{
+  padding-left:50px;
+  padding-bottom: 100px;
+}
+.btn-orange{
+ background-image: -webkit-linear-gradient(-51deg, #eb120a 0%, #ff5e14 99%);
+ color:white;
+ margin:10px 10px 10px 10px;
+}
+
+.btn-link{
+  color:white;
+  text-decoration: underline;
+}
+.btn-link:hover{
+  color:#eb120a;
+}
+.btn-orange:hover{
+  background-image: none;
+  background-color: white;
+  color:#eb120a;
+}
+
+.btn-rounded{
+  width: 250px;
+  height: 70px;
+  border-radius: 35px;
+  font-size: 20px;
+}
+a.btn-orange{
+  padding: 20px;
+}
+a.btn-orange:hover{
+  border:1px solid #eb120a;
+}
+.btn-primary{
+  width:150px;
+  height:50px;
+  border-radius: 25px;
+}
+.main-content{
+  margin-top:30px;
+}
+.main-content i {
+  display: block;
+  font-size:50px;
+  color:#eb120a;
+  margin-bottom:20px;
+}
+.our-services-main-content-container .row{
+  margin-bottom:30px;
+}
+p.main-content-home-subtitle{
+  font-size:50px;
+  font-weight: bold;
+  margin-top:40px;
+}
+p.our-services-home-text{
+  font-size:23px;
+}
+
+div.heading-underline{
+  height:5px;
+  background-color:#eb120a;
+  width:40%;
+  margin:auto;
+}
+.main-content p.main-content-subtitle{
+  font-size:20px;
+  font-weight: 600;
+}
+.main-content p.content{
+  font-size: 19px;
+}
+.oranger-underline{
+  height:5px;
+  background-color:#eb120a;
+  width:15%;
+  margin-bottom:20px;
+}
+footer{
+  background-color:#1d497f;
+  padding:50px 50px 10px 50px;
+  color:white;
+  margin: 50px 0px 0px 0px;
+  font-size: 16px;
+}
+footer ul{
+  padding:0px;
+}
+footer ul li{
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: underline;
+  color:white;
+}
+footer ul li a:hover {
+  color:#eb120a;
+}
+li.underline-none a{
+  text-decoration: none;
+}
+li.underline-none a:first-child{
+  padding-top:10px;
+}
+.copyright-row{
+  margin-top:20px;
+}
+.whiteblock{
+  background-image: url(../img/white-block.png);
+  height:150px;
+}
+.learn-more .btn-rounded {
+  margin-top:30px;
+  width:250px;
+}
+.learn-more i {
+  display: inline;
+}
+.title-row-our-services{
+  background-image: url(../img/our-services-main.jpg);
+  margin-bottom: 60px;
+}
+.title-row-equipment-fleet{
+  background-image: url(../img/Fleets2.jpg);
+  margin-bottom: 60px;
+}
+.title-row-about{
+  background-image: url(../img/about.png);
+  margin-bottom: 60px;
+}
+.title-row-contact-us{
+  background-image: url(../img/contact-us.jpg);
+}
+.breadcrumb h1{
+  font-size:50px;
+  font-weight: bold;
+  color:white;
+  margin:150px 0px 30px 0px;
+}
+.breadcrumb h3{
+  font-size:25px;
+  color:white;
+  font-weight: bold;
+  margin-bottom:150px;
+}
+.breadcrumb h3 a:hover{
+  text-decoration: none;
+}
+.breadcrumb h3 a{
+  color:#eb120a;
+}
+.breadcrumb i {
+  font-size:25px;
+}
+
+.content-subtitle {
+  font-size:18px;
+  font-weight: bold;
+}
+.content {
+  font-size:20px;
+}
+.border-left-block{
+  border-left: 5px solid #eb120a;
+  padding:20px;
+}
+.border-right-block{
+  border-right: 5px solid #eb120a;
+  padding:20px;
+}
+h2.border-left-block{
+  font-size:25px;
+}
+.support-text-block{
+  background-image: url(../img/support.jpg);
+  color:white;
+  padding:150px 50px 100px 50px;
+  margin-top:50px;
+}
+.support-text-block h3{
+  text-decoration: underline;
+}
+.support-text-block p{
+  font-size:20px;
+  margin-bottom:40px;
+}
+.background-fixed{
+  background-size: cover;
+  padding:130px;
+  background-attachment: fixed;
+}
+.background-center{
+  background-position: center center;
+}
+.background-fixed-low-padding{
+  padding:10px;
+}
+.margin-bottom-30px{
+  margin-bottom:30px;
+}
+.margin-bottom-80px{
+  margin-bottom: 80px;
+}
+.margin-top-40px{
+  margin-top:40px;
+}
+footer.no-margin-top{
+  margin-top:0px;
+}
+h3.orange-block{
+  background-color: #eb120a;
+  color:white;
+  padding:20px;
+  text-align: center;
+}
+h3.blue-block{
+  background-color: #428bca;
+  color:white;
+  padding:20px;
+  text-align: center;
+}
+form {
+  margin-top:50px;
+}
+.about-us-paragraph-title{
+  font-size: 20px;
+  font-weight: 600;
+  margin-top:30px;
+}
+div.heading-underline-about{
+  height: 5px;
+  background-color: #eb120a;
+  width: 20%;
+  margin-bottom:20px;
+}
+.about-us-paragraph-content{
+  font-size: 16px;
+}
+.about-container{
+  width:80%;
+  margin:auto;
+}
+.about-container img{
+  padding: 50px;
+  margin:auto;
+}
+/* media queries */
+
+@media only screen and (max-width: 767px) {
+  p.main-content-home-subtitle{
+    font-size:30px;
+  }
+  p.our-services-home-text{
+    font-size:16px;
+  }
+  .home-our-services-section{
+    margin-top:30px;
+  }
+  h2.border-left-block{
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .background-fixed{
+    padding:0px;
+  }
+  header.landing-page-header{
+    background-image: url(../img/01_sm.jpg);
+  }
+  .title-row-equipment-fleet {
+    background-image: url(../img/Fleets2_sm.png);
+  }
+
+}
+@media only screen and (min-width: 370px) and (max-width: 767px) {
+  h1.main-page-heading{
+    font-size: 45px;
+    font-weight: bold;
+    color:white;
+    padding:80px 10px 100px 10px;
+  }
+  .row.getting-started{
+    padding-left:10px;
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 369px) {
+  h1.main-page-heading{
+    padding:80px 10px 100px 10px;
+    font-size: 35px;
+  }
+  .row.getting-started{
+    padding-left:10px;
+    padding-bottom: 40px;
+  }
+}
+
+
+
