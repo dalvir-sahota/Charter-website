@@ -39,6 +39,9 @@ header.sub-pages .nav > li > a:hover, header.sub-pages .nav > li > a:focus, head
   margin-top:15px;
   float:right;
 }
+nav .row{
+  margin:0px;
+}
 .nav > li > a:hover, .nav > li > a:focus,.navbar-brand:hover,.nav > li.active > a{
   color: #eb120a;
   background-color: transparent;
@@ -67,12 +70,11 @@ h1.main-page-heading{
   font-size: 100px;
   font-weight: bold;
   color:orangered;
-  padding:80px 50px 120px 50px;
+  padding:150px 50px 120px 50px;
 }
-
 .row.getting-started{
   padding-left:50px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .btn-orange{
  background-image: -webkit-linear-gradient(-51deg, #eb120a 0%, #ff5e14 99%);
@@ -152,6 +154,9 @@ div.heading-underline{
 }
 footer{
   background-color:#1d497f;
+  background-image: url(../img/footer_background_4.jpg);
+  background-position-x: 110%;
+  background-repeat: no-repeat;
   padding:50px 50px 10px 50px;
   color:white;
   margin: 50px 0px 0px 0px;
