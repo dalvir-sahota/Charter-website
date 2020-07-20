@@ -6,27 +6,40 @@ body{
 }
 header.landing-page-header{
   background-image: url(../img/01.jpg);
+  padding:5px;
+}
+header.landing-page-header .navbar .navbar-nav > li, header.landing-page-header .navbar .navbar-nav > li > a{
+  padding:5px;
 }
 header.sub-pages{
   padding:5px;
+  background-image: -webkit-linear-gradient(-51deg, #ff5e14 0%, #f17136 99%);
 }
 header.sub-pages .navbar .navbar-nav > li > a, header.sub-pages .navbar-brand {
-  color:black;
+  color:#ffffff;
   font-weight: bold;
+  padding:5px;
+}
+header.sub-pages .navbar .navbar-nav > li {
+  padding:5px;
 }
 header.sub-pages .navbar .navbar-nav > li.active > a{
-  color:#eb120a;
+  color:#000000;
 }
 header.sub-pages .nav > li > a:hover, header.sub-pages .nav > li > a:focus, header.sub-pages .navbar-brand:hover{
-  color: #eb120a;
+  color: #000000;
   background-color: transparent;
 }
-.navbar .navbar-nav > li > a{
+.navbar .navbar-nav > li > a,.nav ul.display-li-block li > a{
   color:white;
   font-size: 16px;
   font-weight: bold;
 }
-.nav > li > a:hover, .nav > li > a:focus,.navbar-brand:hover {
+.nav ul.display-li-block {
+  margin-top:15px;
+  float:right;
+}
+.nav > li > a:hover, .nav > li > a:focus,.navbar-brand:hover,.nav > li.active > a{
   color: #eb120a;
   background-color: transparent;
 }
@@ -146,8 +159,15 @@ footer{
 }
 footer ul{
   padding:0px;
+  margin-bottom:20px;
 }
 footer ul li{
+  list-style: none;
+  display:inline;
+  margin-right:10px;
+}
+ul.display-li-block li{
+  display: block;
   list-style: none;
 }
 footer ul li a {
