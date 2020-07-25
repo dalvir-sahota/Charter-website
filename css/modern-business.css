@@ -20,6 +20,9 @@ header.sub-pages .navbar .navbar-nav > li > a, header.sub-pages .navbar-brand {
   font-weight: bold;
   padding:5px;
 }
+header nav a.navbar-brand{
+  padding:0px;
+}
 header.sub-pages .navbar .navbar-nav > li {
   padding:5px;
 }
