@@ -17,7 +17,7 @@ $mail = new PHPMailer(true);
 
 
 // check for form submission - if it doesn't exist then send back to contact form
-if (!isset($_POST['submit']) || $_POST['submit'] != 'contact' || $_POST['save'] != 'career') {
+if (!isset($_POST['submit']) && ($_POST['submit'] != 'contact' || $_POST['save'] != 'career')) {
     header('Location: contact.php'); 
     exit;
 }
@@ -27,7 +27,7 @@ $first_name = $_POST['firstname'];
 $last_name = $_POST['lastname'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
-//$message = $_POST['contact_message'];
+$message = $_POST['message'];
 	
 // check that a name was entered
 if (empty($first_name))
@@ -58,30 +58,32 @@ try {
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;           // Enable verbose debug output
     $mail->isSMTP();                                   // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';              // Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                          // Enable SMTP authentication
-    $mail->Username   = 'bvb09.soc@gmail.com';         // SMTP username
-    $mail->Password   = 'Proton@011';                  // SMTP password
+    $mail->SMTPAuth   =  true;                         // Enable SMTP authentication
+    $mail->Username   = '';         // SMTP username
+    $mail->Password   = '';                  // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                           // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('bvb09.soc@gmail.com', 'Mailer');
+    $mail->setFrom($mail->Username, 'Charter Freight Services');
     //$mail->addAddress('dalvirsahota@gmail.com', 'Joe User');     // Add a recipient
     //$mail->addAddress('kriskristoronto@gmail.com');               // Name is optional
     //$mail->addReplyTo('bvb09.soc@gmail.com', 'Information');
     //$mail->addCC('randhawakgagan@gmail.com');
     //$mail->addBCC('gaganrandhawastar@gmail.com');
-    $mail->addAddress('dalvirsahota@gmail.com');
+    $mail->addAddress($mail->Username);
     // Attachments
     //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = $_POST['save'] == 'contact' ? "New contact request" : "New hiring/career request";
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+    $mail->Subject = ($_POST['submit'] == 'contact' ? "New contact request" : "New hiring/career request");
+    $mail->Body    = "<b>Name : </b>".$first_name." ".$last_name."<br>"
+                    ."<b>Phone : </b>".$phone."<br>"
+                    ."<b>Email : </b>".$email_address."<br>"
+                    ."<b>Message : </b>".$message;
+    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     $mail->send();
     //echo 'Message has been sent';
     //header('Location: contact.php?e='.urlencode('Message has been sent'));
@@ -90,6 +92,7 @@ try {
     //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 // send the user back to the form
-//header('Location: contact.php?s='.urlencode('Thank you for your message.')); exit;
+header("Location: contact.php?code=200"); 
+exit;
 
 ?>

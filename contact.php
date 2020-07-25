@@ -1,3 +1,8 @@
+<?php
+$showSuccessMessage = false; 
+if(isset($_GET['code']))
+    $showSuccessMessage = true;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -64,7 +69,15 @@
 </div>
 <!-- main content -->
 <div class="main-content-container our-services-main-content-container" id="contact-us-form">
-        <div class="row">
+<div class="row" style="display:<?php echo $showSuccessMessage ? 'block' : 'none' ?>">
+    <div class="col-xs-12">
+        <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Thank you! for your message.</strong> We will get back to you ASAP.
+    </div>
+</div>
+</div>        
+<div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <form action="contact-form-submission.php" method="POST">
                     <fieldset>
@@ -102,13 +115,10 @@
                             <div class="col-md-12">
                                  <div class="form-group">
                                          <label for="message">Message</label>
-                                         <textarea id="message" name="message"
-          rows="5" cols="33" class="form-control">
-</textarea>
+                                         <textarea id="message" name="message" rows="5" cols="33" class="form-control"></textarea>
                                  </div>
                             </div>
-                        </div>
-    
+                    </div>
                     <div class="row">
                         <div class="col-md-12">
                             <button class="btn btn-rounded btn-primary" name="submit" value="contact">SUBMIT</button>
