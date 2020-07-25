@@ -66,11 +66,6 @@ try {
 
     //Recipients
     $mail->setFrom($mail->Username, 'Charter Freight Services');
-    //$mail->addAddress('dalvirsahota@gmail.com', 'Joe User');     // Add a recipient
-    //$mail->addAddress('kriskristoronto@gmail.com');               // Name is optional
-    //$mail->addReplyTo('bvb09.soc@gmail.com', 'Information');
-    //$mail->addCC('randhawakgagan@gmail.com');
-    //$mail->addBCC('gaganrandhawastar@gmail.com');
     $mail->addAddress($mail->Username);
     // Attachments
     //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
