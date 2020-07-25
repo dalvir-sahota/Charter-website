@@ -66,7 +66,7 @@
 <div class="main-content-container our-services-main-content-container" id="contact-us-form">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <form action="contact-form-submission.php">
+                <form action="contact-form-submission.php" method="POST">
                     <fieldset>
                         <legend>Your Information</legend>
                         <div class="row">
@@ -111,7 +111,7 @@
     
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-rounded btn-primary">SUBMIT</button>
+                            <button class="btn btn-rounded btn-primary" name="save" value="contact">SUBMIT</button>
                         </div>
                     </div>
                 </form>
