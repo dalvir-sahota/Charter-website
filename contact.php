@@ -111,7 +111,7 @@
     
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-rounded btn-primary" name="save" value="contact">SUBMIT</button>
+                            <button class="btn btn-rounded btn-primary" name="submit" value="contact">SUBMIT</button>
                         </div>
                     </div>
                 </form>

@@ -111,7 +111,7 @@
                    </fieldset>
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-rounded btn-primary">SUBMIT</button>
+                            <button class="btn btn-rounded btn-primary" name="submit" value="career">SUBMIT</button>
                         </div>
                     </div>
                 </form>
