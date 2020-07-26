@@ -12,7 +12,7 @@ if(isset($_GET['code']))
     <meta name="author" content="">
 
     <title>Careers - Charter Logistics</title>
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
