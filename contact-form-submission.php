@@ -11,13 +11,14 @@ require 'PHPMailer/src/SMTP.php';
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 var_dump($_POST);
+var_dump($_FILES);
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
 
 // check for form submission - if it doesn't exist then send back to contact form
-if (!isset($_POST['submit']) && ($_POST['submit'] != 'contact' || $_POST['save'] != 'career')) {
+if (!isset($_POST['submit']) && ($_POST['submit'] != 'contact' || $_POST['submit'] != 'career')) {
     header('Location: contact.php'); 
     exit;
 }
@@ -27,7 +28,15 @@ $first_name = $_POST['firstname'];
 $last_name = $_POST['lastname'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
-$message = $_POST['message'];
+$requst_from_career_page = ($_POST['submit'] == 'career');
+$message = "This email is generated from career page please find the attachments.";
+$attachment = "";
+
+if($requst_from_career_page){
+    $attachment = $_FILES['attachment'];
+}else{
+    $message = $_POST['message'];
+}
 	
 // check that a name was entered
 if (empty($first_name))
@@ -46,8 +55,7 @@ if (empty($phone))
     $error = 'You must enter your phone number.';
 // check that a message was entered
 elseif (empty($message))
-    $error = 'You must enter a message.';
-		
+    $error = 'You must enter a message.';	
 // check if an error was found - if there was, send the user back to the form
 if (isset($error)) {
    // header('Location: contact.php?e='.urlencode($error)); //exit;
@@ -69,7 +77,9 @@ try {
     $mail->addAddress($mail->Username);
     // Attachments
     //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+    if($requst_from_career_page){
+        $mail->addAttachment($attachment["tmp_name"], $attachment["name"]);    // Optional name
+    }
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
@@ -87,7 +97,11 @@ try {
     //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 // send the user back to the form
-header("Location: contact.php?code=200"); 
+if($requst_from_career_page){
+    header("Location: careers.php?code=200"); 
+}else{
+    header("Location: contact.php?code=200"); 
+}
 exit;
 
 ?>

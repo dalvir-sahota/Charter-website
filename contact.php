@@ -34,7 +34,7 @@ if(isset($_GET['code']))
                         </button>
                         <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
                         <a href="index.html" class="navbar-brand hidden-md hidden-sm hidden-xs"><img src="./img/charter_logo_black_md.png" alt=""/></a>
-                                <a href="index.html" class="navbar-brand hidden-lg"><img src="./img/charter_logo_black_xs.png" alt=""/></a>                                                    </div>
+                        <a href="index.html" class="navbar-brand hidden-lg"><img src="./img/charter_logo_black_xs.png" alt=""/></a>                                                    </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <div class="row">
@@ -136,7 +136,8 @@ if(isset($_GET['code']))
             <div class="col-md-6 border-left-block">
                 <h4>Contact Details</h4>
                 <a href="mailto:dispatch@charterfreightservices.com"><i class="fa fa-envelope" aria-hidden="true" ></i> dispatch@charterfreightservices.com</a><br>
-                <a href="tel:+19057811237"><i class="fa fa-phone" aria-hidden="true"></i> +1 (905) 781-1237</a>
+                <a href="tel:+19057811237"><i class="fa fa-phone" aria-hidden="true"></i> +1 (905) 781-1237</a><br>
+                <a href="fax:+19056542636"><i class="fa fa-print" aria-hidden="true"></i> +1 (905) 654-2636</a>
             </div>
             <div class="col-md-6 border-left-block">
                 <h4>Office Address</h4>
@@ -172,6 +173,7 @@ if(isset($_GET['code']))
                     </ul>
                     <ul class="display-li-block">
                         <li class="underline-none"><a href="tel:+19057811237"></a><i class="fa fa-phone" aria-hidden="true"></i> +1 (905) 781-1237</a></li>
+                        <li class="underline-none"><a href="fax:+19056542636"><i class="fa fa-print" aria-hidden="true"></i> +1 (905) 654-2636</a></li>
                         <li class="underline-none"><a href="mailto:dispatch@charterfreightservices.com"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;dispatch@charterfreightservices.com</a></li>
                     </ul>
                 </div> 

@@ -1,3 +1,8 @@
+<?php
+$showSuccessMessage = false; 
+if(isset($_GET['code']))
+    $showSuccessMessage = true;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +15,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
     <!-- Add custom CSS here -->
     <link href="css/modern-business.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +33,7 @@
                         </button>
                         <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
                         <a href="index.html" class="navbar-brand hidden-md hidden-sm hidden-xs"><img src="./img/charter_logo_black_md.png" alt=""/></a>
-                                <a href="index.html" class="navbar-brand hidden-lg"><img src="./img/charter_logo_black_xs.png" alt=""/></a>                                
+                        <a href="index.html" class="navbar-brand hidden-lg"><img src="./img/charter_logo_black_xs.png" alt=""/></a>                                
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -58,16 +62,24 @@
 <div class="container-fluid our-services-main-content">
             <div class="row title-row-contact-us text-center background-fixed breadcrumb">
                 <div class="col-xs-12">
-                    <h1>Contact Us</h1>
+                    <h1>Careers</h1>
                     <h3><a href="index.html">Home</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Careers</h3>
                 </div>
             </div>
 </div>
 <!-- main content -->
 <div class="main-content-container our-services-main-content-container">
-        <div class="row">
+<div class="row" style="display:<?php echo $showSuccessMessage ? 'block' : 'none' ?>">
+    <div class="col-xs-12">
+        <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Thank you! for your message.</strong> We will get back to you ASAP.
+    </div>
+</div> 
+</div>       
+<div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <form action="contact-form-submission.php">
+                <form action="contact-form-submission.php" method="POST" enctype="multipart/form-data">
                     <fieldset>
                         <legend>Your Information</legend>
                         <div class="row">
@@ -104,8 +116,8 @@
                        <div class="row">
                             <div class="col-md-6">
                                  <div class="form-group">
-                                         <label for="attachments">Resume</label>
-                                         <input type="file" name="attachments" id="attachments" class="form-control" />
+                                         <label for="attachment">Resume</label>
+                                         <input type="file" name="attachment" id="attachment" class="form-control" />
                                  </div>
                             </div>
                         </div>
@@ -127,7 +139,8 @@
             <div class="col-md-6 border-left-block">
                 <h4>Contact Details</h4>
                 <a href="mailto:dispatch@charterfreightservices.com"><i class="fa fa-envelope" aria-hidden="true" ></i> dispatch@charterfreightservices.com</a><br>
-                <a href="tel:+16471231234"><i class="fa fa-phone" aria-hidden="true"></i> +1 (647) 123-1234</a>
+                <a href="tel:+16471231234"><i class="fa fa-phone" aria-hidden="true"></i> +1 (647) 123-1234</a><br>
+                <a href="fax:+19056542636"><i class="fa fa-print" aria-hidden="true"></i> +1 (905) 654-2636</a>
             </div>
             <div class="col-md-6 border-left-block">
                 <h4>Office Address</h4>
@@ -163,6 +176,7 @@
                     </ul>
                     <ul class="display-li-block">
                         <li class="underline-none"><a href="tel:+19057811237"></a><i class="fa fa-phone" aria-hidden="true"></i> +1 (905) 781-1237</a></li>
+                        <li class="underline-none"><a href="fax:+19056542636"><i class="fa fa-print" aria-hidden="true"></i> +1 (905) 654-2636</a></li>
                         <li class="underline-none"><a href="mailto:dispatch@charterfreightservices.com"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;dispatch@charterfreightservices.com</a></li>
                     </ul>
                 </div> 
