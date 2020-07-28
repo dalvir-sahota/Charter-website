@@ -40,7 +40,7 @@ if(isset($_GET['code']))
                     <div class="row">
                             <ul class="nav navbar-nav navbar-right">
                                     <li><a href="tel:+19057811237"><i class="glyphicon glyphicon-phone"></i> (905) 781-1237</a></li>
-                                    <li><a href="mailto:dispatach@charterfreightservices.com"><i class="glyphicon glyphicon-envelope"></i> dispatach@charterfreightservices.com</a></li>        
+                                    <li><a href="mailto:dispatach@charterfreightservices.com"><i class="glyphicon glyphicon-envelope"></i> dispatch@charterfreightservices.com</a></li>        
                             </ul>
                     </div>    
                     <div class="row">
