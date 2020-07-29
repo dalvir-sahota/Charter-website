@@ -60,7 +60,7 @@ if(isset($_GET['code']))
         </nav>
 </header>
 <div class="container-fluid our-services-main-content">
-            <div class="row title-row-contact-us text-center background-fixed breadcrumb">
+            <div class="row title-row-career text-center background-fixed breadcrumb">
                 <div class="col-xs-12">
                     <h1>Careers</h1>
                     <h3><a href="index.html">Home</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Careers</h3>

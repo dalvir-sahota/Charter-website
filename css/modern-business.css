@@ -220,6 +220,9 @@ li.underline-none a:first-child{
 .title-row-contact-us{
   background-image: url(../img/contact-us.jpg);
 }
+.title-row-career{
+  background-image: url(../img/contact-us.jpg);
+}
 .breadcrumb h1{
   font-size:50px;
   font-weight: bold;
